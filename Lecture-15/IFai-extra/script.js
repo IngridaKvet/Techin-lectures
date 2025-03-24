@@ -56,7 +56,106 @@ if(k <= a){
   console.log(`Už bandeles bus sumokėta: ${(n3*k).toFixed(2)} Lt`);
 }
 
+/* 5. Geriausia klasė*/
+let vidurkiaiStr1  = prompt("Įveskite klasių vidurkius:");
+let vidurkiaiStrArr= vidurkiaiStr1.split(" ");
+let vidurkiaiArr = [Number(vidurkiaiStrArr[0]), Number(vidurkiaiStrArr[1]), Number(vidurkiaiStrArr[2]), Number(vidurkiaiStrArr[3])];
 
+let aKlase = vidurkiaiArr[0];
+let bKlase = vidurkiaiArr[1];
+let cKlase = vidurkiaiArr[2];
+let dKlase = vidurkiaiArr[3];
 
+let maxVidurkis = Math.max(Number(vidurkiaiStrArr[0]), Number(vidurkiaiStrArr[1]), Number(vidurkiaiStrArr[2]), Number(vidurkiaiStrArr[3]));
 
+console.log("Didžiausias " + maxVidurkis);
+
+switch(true) {
+  case aKlase === maxVidurkis:
+    console.log(`Kitų klasių vidurkiai skiriasi ${aKlase - bKlase}, ${aKlase - cKlase}, ${aKlase - dKlase}`);
+    break;
+  case bKlase === maxVidurkis:
+    console.log(`Kitų klasių vidurkiai skiriasi ${bKlase - aKlase}, ${bKlase - cKlase}, ${bKlase - dKlase}`);
+    break;
+  case cKlase === maxVidurkis:
+    console.log(`Kitų klasių vidurkiai skiriasi ${cKlase - aKlase}, ${cKlase - bKlase}, ${cKlase - dKlase}`);
+    break;
+  case dKlase === maxVidurkis:
+    console.log(`Kitų klasių vidurkiai skiriasi ${dKlase - aKlase}, ${dKlase - bKlase}, ${dKlase - cKlase}`);
+    break;
+}
+
+// /* 6. Žiemojantys paukščiai */
+let pauksciaiStr  = prompt("Įveskite kiek kiekvienos rūšies paukščių liko žiemoti:");
+let pauksciaiStrArr= pauksciaiStr.split(" ");
+let pauksciai1 = Number(pauksciaiStrArr[0]);
+let pauksciai2 = Number(pauksciaiStrArr[1]);
+let pauksciai3 = Number(pauksciaiStrArr[2]);
+
+if((pauksciai1 > pauksciai2) && (pauksciai1 > pauksciai3)){
+  console.log(pauksciai1);
+  if(pauksciai2 > pauksciai3){
+    console.log(pauksciai2);
+    console.log(pauksciai3);
+    console.log(`Skirtumas tarp didžiausio ir mažiausio: ${pauksciai1 - pauksciai3}`)
+  } else{
+    console.log(pauksciai3);
+    console.log(pauksciai2);
+    console.log(`Skirtumas tarp didžiausio ir mažiausio: ${pauksciai1 - pauksciai2}`)
+  }
+} else if((pauksciai2 > pauksciai1) && (pauksciai2 > pauksciai3)){
+  console.log(pauksciai2);
+  if(pauksciai1 > pauksciai3){
+    console.log(pauksciai1);
+    console.log(pauksciai3);
+    console.log(`Skirtumas tarp didžiausio ir mažiausio: ${pauksciai2 - pauksciai3}`)
+  } else{
+    console.log(pauksciai3);
+    console.log(pauksciai1);
+    console.log(`Skirtumas tarp didžiausio ir mažiausio: ${pauksciai2 - pauksciai1}`)
+  }
+} else if((pauksciai3 > pauksciai2) && (pauksciai3 > pauksciai1)){
+  console.log(pauksciai3);
+  if(pauksciai2 > pauksciai1){
+    console.log(pauksciai2);
+    console.log(pauksciai1);
+    console.log(`Skirtumas tarp didžiausio ir mažiausio: ${pauksciai3 - pauksciai1}`)
+  } else{
+    console.log(pauksciai1);
+    console.log(pauksciai2);
+    console.log(`Skirtumas tarp didžiausio ir mažiausio: ${pauksciai3 - pauksciai2}`)
+  }
+}
+
+/* 7. Jonuko problema */
+let variantas = Number(prompt("Įveskite užduoties variantą. "));
+let aReiksme = Number(prompt("Įveskite a reikšmę: "));
+let bReiksme = Number(prompt("Įveskite b reikšmę: "));
+
+switch(true) {
+  case variantas === 1:
+    console.log(`Atsakymas: x = ${(aReiksme*bReiksme)+3}`);
+    break;
+  case variantas === 2:
+    console.log(`Atsakymas: x = ${aReiksme + bReiksme}`);
+    break;
+  case variantas === 3:
+    console.log(`Atsakymas: x = ${aReiksme - bReiksme}`);
+    break;
+}
+
+/* 8. Skaičiai*/
+let aKart = Number(prompt("Įveskite a reikšmę: "));
+let bKart = Number(prompt("Įveskite b reikšmę: "));
+let cKart = Number(prompt("Įveskite c reikšmę: "));
+
+if(aKart % 3 === 0){
+  console.log("Atsakymas: " + aKart)
+} else if(bKart % 3 === 0){
+    console.log("Atsakymas: " + bKart)
+  } else if(cKart % 3 === 0){
+    console.log("Atsakymas: " + cKart)
+    } else{
+      console.log("Atsakymas: nėra")
+    }
 
