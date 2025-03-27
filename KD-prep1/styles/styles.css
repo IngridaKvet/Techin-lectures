@@ -1,0 +1,79 @@
+/* Universal */
+:root{
+    font-size: 62.5%;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-inline-size: 100%;
+    display: block;
+}
+
+
+
+/* Shared*/
+.why-us__headline,
+.why-us__subheadline{
+    font-family: "Unica One", sans-serif;
+}
+
+
+.why-us__text,
+.why-us__list{
+    font-family: "Ubuntu", sans-serif;
+    color: #6e6e6e;
+    font-size: 2rem;
+}
+
+
+/* Why us section */
+.why-us{
+    display: grid;
+    grid-template-columns: 70.3rem 70.3rem;
+    justify-content: center;
+    margin-block: 6.8rem 13.6rem;
+}
+
+.why-us__text-container{
+    padding: 6rem;
+}
+
+.why-us__headline{
+    color: #121212;
+    font-size: 5rem;
+    margin-bottom: 4.4rem;
+}
+
+.why-us__subheadline{
+    color: #ff9421;
+    font-size: 3.7rem;
+    margin-bottom: 2.2rem;
+}
+
+.why-us__text{
+    margin-bottom: 7.6rem;
+}
+
+.why-us__list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.why-us__item{
+    display: flex;
+    gap: 2.2rem;
+}
+
+.why-us__item::before {
+    content: "✔";
+    color: #ff9421;
+}
+
+/* Footer */
