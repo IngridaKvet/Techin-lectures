@@ -6,6 +6,7 @@
 }
 
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -19,56 +20,118 @@ img{
 
 /* Shared*/
 .why-us__headline,
-.why-us__subheadline{
+.why-us__subheadline,
+.offer__headline,
+.offer-card__headline{
     font-family: "Unica One", sans-serif;
 }
 
+
+.offer-card__description,
+.offer__description,
 .footer__copyright-text,
 .why-us__text,
 .why-us__list{
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
 }
 
-
+.offer-card__description,
+.offer__description,
 .why-us__text,
 .why-us__list{
     color: #6e6e6e;
 }
 
 
+/* Offer section */
+.offer{
+    background-color: #f6f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2.2rem 2.7rem;
+}
+
+.offer__headline{
+    color: #ff9421;
+    font-size: 5.2rem;
+    text-align: center;
+}
+
+.offer__description{
+    max-width: 52.9rem;
+    text-align: center;
+    margin-bottom: 7.7rem;
+}
+
+.offer-card__headline{
+    color: #121212;
+    font-size: 2.6rem;
+}
+
+.offer-cards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 33.3rem));
+    gap: 2.6rem;
+    margin-inline: 2rem;
+}
+
+.offer-card{
+    
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    border: 2px solid #ebebeb;
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+    padding: 4.1rem 2.7rem;
+    box-shadow: 3px 3px 10px #ebebeb;
+
+}
+
+i.offer-card__icon{
+    font-size: 4.8rem;
+    color:#ff9421;
+}
+
+
+
+
 /* Why us section */
 .why-us{
     display: grid;
-    grid-template-columns: 70.3rem 70.3rem;
+    grid-template-columns: minmax(0, 52.7rem) minmax(0, 52.7rem);
     justify-content: center;
-    margin-block: 6.8rem 13.6rem;
+    margin-block: 5.1rem 10.1rem;
+    margin-inline: 2rem;
 }
 
 .why-us__text-container{
-    padding: 6rem;
+    padding: 5.2rem 3.5rem;
 }
 
 .why-us__headline{
     color: #121212;
-    font-size: 5rem;
-    margin-bottom: 4.4rem;
+    font-size: 3.6rem;
+    margin-bottom: 3.3rem;
 }
 
 .why-us__subheadline{
     color: #ff9421;
-    font-size: 3.7rem;
-    margin-bottom: 2.2rem;
+    font-size: 2.6rem;
+    margin-bottom: 1.7rem;
 }
 
 .why-us__text{
-    margin-bottom: 7.6rem;
+    margin-bottom: 5.7rem;
 }
 
 .why-us__list{
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.3rem;
 }
 
 .why-us__item{
@@ -81,6 +144,11 @@ img{
     color: #ff9421;
 }
 
+.why-us__img{
+    object-fit: cover;
+    height: 100%;
+}
+
 /* Footer */
 .footer{
     background-color: #333333;
@@ -89,6 +157,24 @@ img{
 .footer__copyright-text{
     text-align: center;
     color: #ffffff;
-    padding-block: 4.3rem 4.7rem;
-    font-weight: 600;
+    padding-block: 3.2rem 3.5rem;
+    font-weight: 500;
+    margin-inline: 2rem;
+}
+
+/* Media Quieries*/
+@media screen and (width <= 75rem){
+    .offer-cards{
+        grid-template-columns: repeat(2, minmax(0, 33.3rem));
+    }
+}
+
+@media screen and (width <= 48rem){
+    .why-us{
+        grid-template-columns: 1fr;
+    }
+
+    .offer-cards{
+        grid-template-columns: minmax(0, 33.3rem);
+    }
 }
