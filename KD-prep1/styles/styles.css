@@ -2,7 +2,6 @@
 :root{
     font-size: 62.5%;
     font-family: "Ubuntu", sans-serif;
-    
 }
 
 *{
@@ -16,20 +15,19 @@ img{
     display: block;
 }
 
-
-
 /* Shared*/
-
 .hero__headline,
+.benefits__headline,
 .why-us__headline,
 .why-us__subheadline,
 .offer__headline,
-.offer-card__headline{
+.offer__card-headline{
     font-family: "Unica One", sans-serif;
 }
 
 .nav__link,
-.offer-card__description,
+.benefits__text,
+.offer__card-description,
 .offer__description,
 .footer__copyright-text,
 .why-us__text,
@@ -38,13 +36,13 @@ img{
     line-height: 1.5;
 }
 
-.offer-card__description,
+.benefits__text,
+.offer__card-description,
 .offer__description,
 .why-us__text,
 .why-us__list{
     color: #6e6e6e;
 }
-
 
 /* Header */
 .header{
@@ -55,7 +53,7 @@ img{
     gap: 2rem;
 }
 
-#logo{
+.header__logo{
     color: #ff9421;
     font-family: "Abril Fatface", serif;
     font-size: 4rem;
@@ -63,12 +61,14 @@ img{
 
 .nav__list{
     display: flex;
-
     gap: 3rem;
     padding-right: 17.5rem;
     list-style-type: none;
-    
+}
 
+.nav__list li{
+    display: flex;
+    justify-content: center;
 }
 
 .nav__link.current-link{
@@ -78,6 +78,7 @@ img{
 .nav__link{
     color: #121212;
     text-align: center;
+    text-decoration: none;
 }
 
 .nav__link:hover{
@@ -103,6 +104,7 @@ img{
 .hero__img{
     max-height: 78.4rem;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -117,7 +119,7 @@ img{
     opacity: 0.5;
 }
 
-.hero-text__wrapper{
+.hero__text-wrapper{
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     align-self: center;
@@ -140,33 +142,51 @@ img{
     gap: 1rem;
 }
 
-.hero-form__label{
+.hero__form-label{
     position: absolute;
     left: -9999px;
 }
 
-.hero-form__input,
-.hero-form-btn{
+.hero__form-input,
+.hero__form-btn{
     border-radius: 0.5rem;
     padding: 1.8rem;
     border: none;
 }
 
-.hero-form__input{
+.hero__form-input{
     padding-right: 8rem;
 }
 
-.hero-form-btn{
+.hero__form-btn{
    color: #ffffff;
    background-color: #ff9421;
 }
 
+/* Benefits section */
+.benefits{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-inline: 2rem;
+}
 
+.benefits__figure{
+     max-width: 33.3rem;
+     position: relative;
+     top: -6rem;
+     z-index: 2;
+}
 
+.benefits__caption{
+    padding: 3.1rem 2.3rem;
+    text-align: center;
+}
 
-
-
-
+.benefits__headline{
+    color: #ff9421;
+    font-size: 2.6rem;
+}
 
 /* Offer section */
 .offer{
@@ -190,20 +210,19 @@ img{
     margin-inline: 2rem;
 }
 
-.offer-card__headline{
+.offer__card-headline{
     color: #121212;
     font-size: 2.6rem;
 }
 
-.offer-cards{
+.offer__cards{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 33.3rem));
     gap: 2.6rem;
     margin-inline: 2rem;
 }
 
-.offer-card{
-    
+.offer__card{
     background-color: #ffffff;
     border-radius: 0.5rem;
     border: 2px solid #ebebeb;
@@ -212,16 +231,12 @@ img{
     gap: 2.6rem;
     padding: 4.1rem 2.7rem;
     box-shadow: 3px 3px 10px #ebebeb;
-
 }
 
-i.offer-card__icon{
+i.offer__card-icon{
     font-size: 4.8rem;
     color:#ff9421;
 }
-
-
-
 
 /* Why us section */
 .why-us{
@@ -293,27 +308,23 @@ i.offer-card__icon{
         grid-template-columns: 1fr;
     }
 
-    .hero-text__wrapper{
+    .hero__text-wrapper{
         justify-self: center;
     }
     
-
-    .offer-cards{
+    .offer__cards{
         grid-template-columns: repeat(2, minmax(0, 33.3rem));
     }
 
     .nav__list{
         padding-right: 0;
     }
-
 }
 
 @media screen and (width <= 58rem){
     .header{
         flex-direction: column;
-    }
-
-    
+    } 
 }
 
 @media screen and (width <= 48rem){
@@ -321,12 +332,16 @@ i.offer-card__icon{
         grid-template-columns: 1fr;
     }
 
-    .offer-cards{
+    .offer__cards{
         grid-template-columns: minmax(0, 33.3rem);
     }
 
     .nav__list{
         flex-direction: column;
+    }
+
+    .hero__figure{
+        min-height: 30rem;
     }
 
     .hero__headline{
@@ -335,12 +350,10 @@ i.offer-card__icon{
         text-align: center;
     }
 
-    .hero-text__wrapper{
+    .hero__text-wrapper{
         gap: 3rem;
         max-width: 40rem;
         padding: 0;
-
-
     }
 
     .hero__form{
@@ -348,4 +361,13 @@ i.offer-card__icon{
         justify-content: center;
         align-items: center;
     }
+
+    .benefits{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefits__figure{
+        top: -2rem;
+   }
 }
