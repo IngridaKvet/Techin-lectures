@@ -26,7 +26,7 @@ img{
     font-family: "Unica One", sans-serif;
 }
 
-
+.nav__link,
 .offer-card__description,
 .offer__description,
 .footer__copyright-text,
@@ -43,6 +43,44 @@ img{
     color: #6e6e6e;
 }
 
+
+/* Header */
+.header{
+    display: flex;
+    padding: 3.2rem 14.4rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+#logo{
+    color: #ff9421;
+    font-family: "Abril Fatface", serif;
+    font-size: 4rem;
+}
+
+.nav__list{
+    display: flex;
+
+    gap: 3rem;
+    padding-right: 17.5rem;
+    list-style-type: none;
+    
+
+}
+
+.nav__link.current-link{
+    color: #ff9421;
+}
+
+.nav__link{
+    color: #121212;
+    text-align: center;
+}
+
+.nav__link:hover{
+    color: #16c8fe;
+}
 
 /* Offer section */
 .offer{
@@ -167,6 +205,18 @@ i.offer-card__icon{
     .offer-cards{
         grid-template-columns: repeat(2, minmax(0, 33.3rem));
     }
+
+    .nav__list{
+        padding-right: 0;
+    }
+}
+
+@media screen and (width <= 58rem){
+    .header{
+        flex-direction: column;
+    }
+
+    
 }
 
 @media screen and (width <= 48rem){
@@ -176,5 +226,9 @@ i.offer-card__icon{
 
     .offer-cards{
         grid-template-columns: minmax(0, 33.3rem);
+    }
+
+    .nav__list{
+        flex-direction: column;
     }
 }
