@@ -1,6 +1,7 @@
 /* Universal */
 :root{
     font-size: 62.5%;
+    font-family: "Ubuntu", sans-serif;
     
 }
 
@@ -22,12 +23,16 @@ img{
     font-family: "Unica One", sans-serif;
 }
 
+.footer__copyright-text,
+.why-us__text,
+.why-us__list{
+    font-size: 2rem;
+}
+
 
 .why-us__text,
 .why-us__list{
-    font-family: "Ubuntu", sans-serif;
     color: #6e6e6e;
-    font-size: 2rem;
 }
 
 
@@ -77,3 +82,13 @@ img{
 }
 
 /* Footer */
+.footer{
+    background-color: #333333;
+}
+
+.footer__copyright-text{
+    text-align: center;
+    color: #ffffff;
+    padding-block: 4.3rem 4.7rem;
+    font-weight: 600;
+}
