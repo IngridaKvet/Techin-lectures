@@ -1,0 +1,50 @@
+/* Default */
+:root{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-inline-size: 100%;
+    display: block;
+}
+
+
+/* Read more section*/
+.read-more{
+    background-color: #354b62;
+    display: flex;
+    justify-content: center;
+    gap: 11.5rem;
+    color: #fff;
+}
+
+.read-more__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2.1rem;
+}
+
+.read-more__wrapper-icon{
+    font-size: 3.2rem;
+}
+
+.read-more__wrapper-headline{
+    font-size: 2rem;
+    margin-top: 2.7rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.read-more__wrapper-link{
+    text-decoration: none;
+    color: #f96e71; 
+    font-size: 1.4rem;
+
+}
