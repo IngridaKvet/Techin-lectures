@@ -116,12 +116,81 @@ img{
     font-size: 1.4rem;
 }
 
+/* Sections*/
+.main{
+    display: grid;
+}
 
+.workspace,
+.awesomeness,
+.concepts{
+    display: grid;
+    justify-self: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
 
+.workspace__figure,
+.workspace__article,
+.awesomeness__figure,
+.awesomeness__article,
+.concepts__figure,
+.concepts__article{
+    max-width: 55.9rem;
+    z-index: 2;
+}
 
+.workspace__figure-img,
+.awesomeness__figure-img,
+.concepts__figure-img{
+    border-radius: 1rem;
+}
 
+.workspace__article-headline,
+.awesomeness__article-headline,
+.concepts__article-headline{
+    font-size: 2rem;
+}
 
+.workspace__article-description,
+.awesomeness__article-description,
+.concepts__article-description{
+    font-size: 1.6rem;
+    padding-block: 1.8rem;
+}
 
+.workspace__article-btn,
+.awesomeness__article-btn,
+.concepts__article-btn{
+    font-size: 1rem;
+    color: #fff;
+    background-color: #f96e71;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+.awesomeness{
+    width: 100%;
+    background-image:url("/images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative;
+}
+
+.awesomeness::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    opacity: 0.8;
+}
+
+/* Footer */
 
 
 /* Media */
